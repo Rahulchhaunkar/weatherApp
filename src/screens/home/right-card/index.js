@@ -12,7 +12,12 @@ const RightHomeCard = () => {
         <Typography variant="h5">City Weather Conditions</Typography>
         <Stack
           alignItems="center"
-          direction="row"
+          sx={{
+            flexDirection: {
+              xs: "column",
+              sm: "row",
+            },
+          }}
           justifyContent="space-between"
         >
           <Stack alignItems="center" direction="row" spacing={2}>
@@ -25,40 +30,55 @@ const RightHomeCard = () => {
         </Stack>
         <Stack
           alignItems="center"
-          direction="row"
+          sx={{
+            flexDirection: {
+              xs: "column",
+              sm: "row",
+            },
+          }}
           justifyContent="space-between"
         >
           <Stack alignItems="center" direction="row" spacing={2}>
             <Air />
             <Typography fontWeight="bold">Wind Speed:</Typography>
           </Stack>
-          <Typography>
+          <Typography align="center">
             {cityDetails?.weather?.windSpeed.toFixed(2)} m/s
           </Typography>
         </Stack>
         <Stack
           alignItems="center"
-          direction="row"
+          sx={{
+            flexDirection: {
+              xs: "column",
+              sm: "row",
+            },
+          }}
           justifyContent="space-between"
         >
           <Stack alignItems="center" direction="row" spacing={2}>
             <Thermostat />
             <Typography fontWeight="bold">Temperature:</Typography>
           </Stack>
-          <Typography>
+          <Typography align="center">
             {cityDetails?.weather?.temperature.toFixed(2)} &#8451;
           </Typography>
         </Stack>
         <Stack
           alignItems="center"
-          direction="row"
+          sx={{
+            flexDirection: {
+              xs: "column",
+              sm: "row",
+            },
+          }}
           justifyContent="space-between"
         >
           <Stack alignItems="center" direction="row" spacing={2}>
             <WaterDrop />
             <Typography fontWeight="bold">Humidity:</Typography>
           </Stack>
-          <Typography>
+          <Typography align="center">
             {cityDetails?.weather?.humidity.toFixed(2)} %rh
           </Typography>
         </Stack>
